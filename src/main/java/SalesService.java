@@ -37,18 +37,6 @@ public class SalesService {
         return minSales + 1;
     }
 
-    // количество месяцев, в которых продажи были ниже среднего (см. п.2);
-    public int getCountMonthMinAverageSales(int[] sales) {
-        int countMonth = 0;
-        int averageAmount = getAverageSum(sales);
-        for (int i = 0; i < sales.length; i++) {
-            if (sales[i] < averageAmount) {
-                countMonth++;
-            }
-        }
-        return countMonth;
-    }
-
     // последний месяц, в которых продажи были ниже среднего
     public int getLastMonthMinAverageSales(int[] sales) {
         int lastMonth = 0;
@@ -59,18 +47,6 @@ public class SalesService {
             }
         }
         return lastMonth + 1;
-    }
-
-    // количество месяцев, в которых продажи были выше среднего (см. п.2);
-    public int getCountMonthMaxAverageSales(int[] sales) {
-        int countMonth = 0;
-        int averageAmount = getAverageSum(sales);
-        for (int i = 0; i < sales.length; i++) {
-            if (sales[i] > averageAmount) {
-                countMonth++;
-            }
-        }
-        return countMonth;
     }
 
     // последний месяц, в которых продажи были выше среднего (см. п.2);

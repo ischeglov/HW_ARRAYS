@@ -67,19 +67,6 @@ class SalesServiceTest {
     }
 
     @Test
-    @DisplayName("Количество месяцев, в которых продажи были ниже среднего")
-    void checkCountMonthMinAverageSales() {
-        // подготавливаем данные:
-        int expected = 5;
-
-        // вызываем целевой метод:
-        int actual = service.getCountMonthMinAverageSales(sales);
-
-        // производим проверку (сравниваем ожидаемый и фактический):
-        Assertions.assertEquals(expected, actual);
-    }
-
-    @Test
     @DisplayName("Последний месяц, в которых продажи были ниже среднего")
     void checkLastMonthMinAverageSales() {
         // подготавливаем данные:
@@ -91,20 +78,7 @@ class SalesServiceTest {
         // производим проверку (сравниваем ожидаемый и фактический):
         Assertions.assertEquals(expected, actual);
     }
-
-    @Test
-    @DisplayName("Количество месяцев, в которых продажи были выше среднего")
-    void checkCountMonthMaxAverageSales() {
-        // подготавливаем данные:
-        int expected = 5;
-
-        // вызываем целевой метод:
-        int actual = service.getCountMonthMaxAverageSales(sales);
-
-        // производим проверку (сравниваем ожидаемый и фактический):
-        Assertions.assertEquals(expected, actual);
-    }
-
+    
     @Test
     @DisplayName("Последний месяц, в которых продажи были выше среднего")
     void checkLastMonthMaxAverageSales() {
